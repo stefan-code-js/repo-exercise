@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logo from "../Images/Logo .svg";
+import { Link } from "react-router-dom";
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {
@@ -21,27 +22,21 @@ const Nav = () => {
       {/* nav items */}
 
       <ul className={`nav-links ${menuOpen ? "visible" : ""}`}>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/">About</a>
-        </li>
-        <li>
-          <a href="/">Services</a>
-        </li>
-        <li>
-          <a href="/">Menu</a>
-        </li>
-        <li>
-          <a href="/">Reservation</a>
-        </li>
-        <li>
-          <a href="/">Order Online</a>
-        </li>
-        <li>
-          <a href="/">Login</a>
-        </li>
+      <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/">About</Link>
+            </li>
+            <li>
+              <Link to="/">Reservations</Link>
+            </li>
+            <li>
+              <Link to="/">Order Online</Link>
+            </li>
+            <li>
+              <Link to="/">Login</Link>
+            </li>
       </ul>
 
       {/*  */}

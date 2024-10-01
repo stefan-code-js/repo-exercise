@@ -1,4 +1,6 @@
 import React from "react";
+import banner from "../Images/restauranfood.jpg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -12,11 +14,14 @@ const Header = () => {
             We are a family owned Mediterraneran restuarent, focusd on
             traditional recipes served with modern twist.
           </p>
-         <link to = "/booking"> <button aria-label="on Click ">Reserve Table</button></link>
+          <Link to="/booking">
+            {" "}
+            <button aria-label="on Click ">Reserve Table</button>
+          </Link>
         </div>
         {/* banner image */}
-        <div>
-            <img src="" alt="" />
+        <div className="banner-img">
+          <img src={banner} alt="banner-image" />
         </div>
       </section>
     </header>
